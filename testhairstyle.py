@@ -1,7 +1,7 @@
 import unittest
 from hairstyle import get_hair, curly_hair, straight_hair, fluffy_hair, no_hair, toomuch_hair
 
-class testhairstyles(unittest.testcase):
+class TestHairStyles(unittest.testcase):
 
     def test_valid_curly(self):
         obj = get_hair("curly")
