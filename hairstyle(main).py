@@ -1,3 +1,10 @@
+from abc import ABC, abstractmethod
+
+class Hairstyle(ABC):
+    @abstractmethod
+    def style(self):
+        pass
+
 class curly_hair():
     def style(self):
         self.style = "curly hair"
@@ -19,20 +26,23 @@ class toomuch_hair():
         self.style = "forest hair"
         print("You'll be having all the hair you like.")
 
-style = input("What style would you like : (/curly/straight/fluffy/bald/forest) ")
+choice = input("What style would you like : (/curly/straight/fluffy/bald/forest) ")
 
-if style == "curly":
-    hair = curly_hair()
-elif style == "straight":
-    hair = straight_hair()
-elif style == "fluffy":
-    hair = fluffy_hair()
-elif style == "bald":
-    hair = no_hair()
-elif style == "forest":
-    hair = toomuch_hair()
+def aply_styles(hair: Hairstyle):
+    hair.style()
+
+styles = {
+    "curly": curly_hair,
+    "straight": straight_hair,
+    "fluffy": fluffy_hair,
+    "bald": no_hair,
+    "forest": toomuch_hair
+}
+
+hair_class = styles.get(choice)
+
+if hair_class:
+    hair = hair_class()
+    aply_styles(hair)
 else :
     print ("Sir, it's not on the menu...")
-
-if hasattr(hair, "style"):
-    hair.style()
