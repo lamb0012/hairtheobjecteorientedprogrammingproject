@@ -5,23 +5,23 @@ class Hairstyle(ABC):
     def style(self):
         pass
 
-class curly_hair():
+class curly_hair(Hairstyle):
     def style(self):
         self.style = "curly hair"
         print("You'll be curly.")
-class straight_hair():
+class straight_hair(Hairstyle):
     def style(self):
         self.style = "straight hair"
         print("You'll be straight.")
-class fluffy_hair():
+class fluffy_hair(Hairstyle):
     def style(self):
         self.style = "fluffy hair"
         print("You'll be fluffy.")
-class no_hair():
+class no_hair(Hairstyle):
     def style(self):
         self.style = "bald"
         print("You'll be bald.")
-class toomuch_hair():
+class toomuch_hair(Hairstyle):
     def style(self):
         self.style = "forest hair"
         print("You'll be having all the hair you like.")
