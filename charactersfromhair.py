@@ -36,4 +36,42 @@ class sf(Character):
         print(self.nm)
         print(hair.style())
         print("An NYU student and political activist who is heavily involved in social causes and caught in a love triangle with Claude and Berger.")
+
+class hud(Character):
+    def __init__(self):
+        self.nm = "LaFayette Johnson"
+
+    def cc(self, hair):
+        print(self.nm)
+        print(hair.style())
+        print("A militant African-American member of the tribe who declares himself the president of the United States of Love.")
+
+class wf(Character):
+    def __init__(self):
+        self.nm = "Woof Dachshund"
+
+    def cc(self, hair):
+        print(self.nm)
+        print(hair.style())
+        print("A gentle, free-loving member of the group who blurs traditional gender and sexual norms.")
+
+class gn(Character):
+    def __init__(self):
+        self.nm = "Jeannie Ryan"
+
+    def cc(self, hair):
+        print(self.nm)
+        print(hair.style())
+        print("A pregnant tribe member who has deep, unrequited feelings for Claude.")
+
+class dc(Character):
+    def __init__(self):
+        self.nm = "Dionne & Crissy"
+
+    def cc(self, hair):
+        print(self.nm)
+        print(hair.style())
+        print("Prominent members and vocalists within the hippie tribe who help drive the story's music and activism.")
+
+
         
